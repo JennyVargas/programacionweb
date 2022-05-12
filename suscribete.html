@@ -70,7 +70,8 @@
         <br>
         <h5 class="valores">Registra tus Datos</h5>
         <br>
-        <form action="recibe.py" method="get" oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coindicen." : "")'>
+        
+        <form id="formulario"action="recibe.py" method="get" oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden." : "")'>
             Nombre: <input name="nombre" type="text" placeholder="ingrese el nombre" required>
             <br>
             <br>
@@ -91,8 +92,22 @@
             <p>
             <label for="password2">Confirmar Contraseña:</label>
             <input id="password2" type=password name=up2>
+            <p>
+            <div>
+              <h1 id="captchaHeading"></h1>
+              <div id="captchaBackground">
+                   <canvas id="captcha">captcha texto</canvas>
+                   <input id="textBox" type="text" name="text">
+                   <div id="buttons">
+                       <input id="submitButton" type="submit">
+                       <button id="refreshButton" type="submit">Refresh</button>
+                   </div>
+                   <!--<span id="output"></span>-->
+               </div>
+            </div>
+            <script src="script.js"></script> 
             <h5 style="font-size: medium;">Genero:</h5>
-            <select name="genero" id="">
+            <select name="genero" id="genero">
                 <option value="1">otro</option>
                 <option value="2">Femenino</option>
                 <option value="3">Masculino</option>
@@ -103,8 +118,6 @@
             <textarea name="comentario" id="" cols="40" rows="8"></textarea>
             <input type="submit" value="enviar" style="background-color: rgb(117, 216, 195); color:rgb(109, 108, 106)">
             <input type="reset" value="limpiar" style="background-color: rgb(117, 216, 195); color:rgb(109, 108, 106)">
-    
-    
         </form>
     </div>
 <!--Fin de foto principal-->
@@ -167,28 +180,28 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    $(document).ready(function() {
-      $("error").hide();
-      $("#formulario").submit(function(){
-        var mensaje="";
-        if($("$nombre").val().trim().lengh>=3){
-          mensaje= "el nombre esta en blanco"
-        }
-        if($("$email").val().trim().lengh>=3){
-          mensaje= "el Email esta en blanco"
-        }
-        if(mensaje !="")
-        {
-          $("#error").html(mensaje);
-          $("#error").show();
-          event.preventDefault();
-        }
+      $(document).ready(function() {
+        $("error").hide();
+        $("#formulario").submit(function(){
+          var mensaje="";
+          if($("$nombre").val().trim().lengh>=3){
+           mensaje= "el nombre esta en blanco"
+          }
+          if($("$email").val().trim().lengh>=3){
+           mensaje= "el Email esta en blanco"
+          }
+          if(mensaje !="")
+          {
+            $("#error").html(mensaje);
+           $("#error").show();
+           event.preventDefault();
+          }
       });
     });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

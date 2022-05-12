@@ -171,3 +171,42 @@ section .section-title {
 }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+#captchaHeading {
+ color: white;
+}
+#captcha {
+ height: 70%;
+ width: 80%;
+ font-size: 30px;
+ letter-spacing: 3px;
+ margin: auto;
+ display: block;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+}
+#submitButton {
+ margin-top: 2em;
+ margin-bottom: 2em;
+ background-color: #08e5ff;
+ border: 0px;
+ font-weight: bold;
+}
+#refreshButton {
+ background-color: #08e5ff;
+ border: 0px;
+ font-weight: bold;
+}
+#textBox {
+ height: 25px;
+}
+.incorrectCaptcha {
+ color: #FF0000;
+}
+.correctCaptcha {
+ color: #7FFF00;
+}
