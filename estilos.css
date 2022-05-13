@@ -178,11 +178,11 @@ section .section-title {
  color: white;
 }
 #captcha {
- height: 70%;
- width: 80%;
+ height: 50%;
+ width: 50%;
  font-size: 30px;
  letter-spacing: 3px;
- margin: auto;
+ /* margin: auto; */
  display: block;
  top: 0;
  bottom: 0;

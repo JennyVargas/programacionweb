@@ -21,19 +21,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto" style="margin-left: 50%;">
         <li class="nav-item">
-          <a class="nav-link" href="file:///C:/Users/jenny/Desktop/Tercer%20Semestre/Programacion%20web/Prueba1/principal.html#">Inicio</a>
+          <a class="nav-link" href="./principal.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="file:///C:/Users/jenny/Desktop/Tercer%20Semestre/Programacion%20web/Prueba1/suscribete.html">Contacto</a>
+          <a class="nav-link" href="./suscribete.html">Contacto</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
             Productos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="file:///C:/Users/jenny/Desktop/Tercer%20Semestre/Programacion%20web/Prueba1/maceteros.html">Maceteros</a>
-            <a class="dropdown-item" href="file:///C:/Users/jenny/Desktop/Tercer%20Semestre/Programacion%20web/Prueba1/Plantas.html">Plantas</a>
-            <a class="dropdown-item" href="file:///C:/Users/jenny/Desktop/Tercer%20Semestre/Programacion%20web/Prueba1/tierradehojas.html">Tierra de Hojas</a>
+            <a class="dropdown-item" href="./maceteros.html">Maceteros</a>
+            <a class="dropdown-item" href="./Plantas.html">Plantas</a>
+            <a class="dropdown-item" href="./tierradehojas.html">Tierra de Hojas</a>
           </div>
         </li>
       </ul>
@@ -46,80 +46,88 @@
 <!--Fin de barra de navegacion-->
 
 <!--Inicio de foto principal-->
-    <div class="columnas">
-        <img href="#" src="imagenes/Logo.png" alt="" width="300px" style="margin-left: 20%;">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h5 class="valores">Registra tus Datos</h5>
-        <br>
-        
-        <form id="formulario"action="recibe.py" method="get" oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden." : "")'>
-            Nombre: <input name="nombre" type="text" placeholder="ingrese el nombre" required>
+        <div class="Container">      
+          <div class="columnas">
+            <img href="#" src="imagenes/Logo.png" alt="" width="300px" style="margin-left: 20%;">
             <br>
             <br>
-            Rut: <input type="text" id="rut" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
-            <!--<button type="submit">Validar RUT</button>-->
-            <script src="validarRUT.js"></script> 
             <br>
             <br>
-            Edad: <input type="number" name="edad" id="" required>
             <br>
             <br>
-            Correo: <input type="email" name="email" id="" required>
             <br>
             <br>
-            <!--Password: <input type="password" name="password" id="" placeholder="ingrese su contraseña"required>-->
-            <label for="password1">Contraseña:</label>
-            <input id="password1" type=password required name=up>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <p>
-            <label for="password2">Confirmar Contraseña:</label>
-            <input id="password2" type=password name=up2>
-            <p>
-            <div>
-              <h1 id="captchaHeading"></h1>
-              <div id="captchaBackground">
-                   <canvas id="captcha">captcha texto</canvas>
-                   <input id="textBox" type="text" name="text">
-                   <div id="buttons">
-                       <input id="submitButton" type="submit">
-                       <button id="refreshButton" type="submit">Refresh</button>
-                   </div>
-                   <!--<span id="output"></span>-->
-               </div>
-            </div>
-            <script src="script.js"></script> 
-            <h5 style="font-size: medium;">Genero:</h5>
-            <select name="genero" id="genero">
-                <option value="1">otro</option>
-                <option value="2">Femenino</option>
-                <option value="3">Masculino</option>
-            </select>
             <br>
             <br>
-            <h5 style="font-size: medium;">Comentarios</h5>
-            <textarea name="comentario" id="" cols="40" rows="8"></textarea>
-            <input type="submit" value="enviar" style="background-color: rgb(117, 216, 195); color:rgb(109, 108, 106)">
-            <input type="reset" value="limpiar" style="background-color: rgb(117, 216, 195); color:rgb(109, 108, 106)">
-        </form>
-    </div>
+            <br>
+            <br>
+            <br>
+            <br>  
+            <br>
+            <h5 class="valores">Registra tus Datos</h5>
+            <br>
+            
+            <form id="formulario"action="recibe.py" method="get" oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden." : "")'>
+                Nombre: <input name="nombre" type="text" placeholder="ingrese el nombre" required>
+                <br>
+                Rut: <input type="text" id="rut" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+                <!--<button type="submit">Validar RUT</button>-->
+                <script src="validarRUT.js"></script> 
+                <br>
+                Edad: <input type="number" name="edad" id="" required>
+                <br>
+
+                Correo: <input type="email" name="email" id="" required>
+                <br>
+
+                <!--Password: <input type="password" name="password" id="" placeholder="ingrese su contraseña"required>-->
+                <label for="password1">Contraseña:</label>
+                <input id="password1" type=password required name=up>
+                <p>
+                <label for="password2">Confirmar Contraseña:</label>
+                <input id="password2" type=password name=up2>
+                <p>
+                <div>
+                  <h1 id="captchaHeading"></h1>
+                  <div id="captchaBackground">
+                      <canvas id="captcha">captcha texto</canvas>
+                      <input id="textBox" type="text" name="text">
+                      <div id="buttons">
+                          <input id="submitButton" type="submit">
+                          <button id="refreshButton" type="submit">Refresh</button>
+                      </div>
+                      <!--<span id="output"></span>-->
+                  </div>
+                </div>
+                <script src="script.js"></script> 
+                <h5 style="font-size: medium;">Genero:</h5>
+                <select name="genero" id="genero">
+                    <option value="1">otro</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">Masculino</option>
+                </select>
+                <br>
+                <br>
+                <h5 style="font-size: medium;">Comentarios</h5>
+                <textarea name="comentario" id="" cols="30" rows="7"></textarea>
+                <input type="submit" value="enviar" style="background-color: rgb(117, 216, 195); color:rgb(109, 108, 106)">
+                <input type="reset" value="limpiar" style="background-color: rgb(117, 216, 195); color:rgb(109, 108, 106)">
+            </form>
+          </div>
+        </div> 
 <!--Fin de foto principal-->
 
 
@@ -134,7 +142,7 @@
               <h1>regístrate gratis para obtener las mejores recomendaciones de Gustavo Faúndez fundador de ArteCultivos 
                 y los últimos lanzamientos y ofertas, te esperamos…
               </h1>
-              <a class="btn btn-primary" href="file:///C:/Users/jenny/Desktop/Tercer%20Semestre/Programacion%20web/Prueba1/suscribete.html" role="button">Suscribete</a>
+              <a class="btn btn-primary" href="./suscribete.html" role="button">Suscribete</a>
             </li>
           </ul>
         </div>
@@ -189,7 +197,12 @@
            mensaje= "el nombre esta en blanco"
           }
           if($("$email").val().trim().lengh>=3){
-           mensaje= "el Email esta en blanco"
+           mensaje= "el Email debe ser mayor a 3"
+          }
+          if($("$contraseña").val().trim().lenght>=6){
+            mensaje="Debe tener un minimo de 6 letras o numeros"
+            if($("$contraseña").val().trim().int>=1)
+            mensaje="Debe tener un numero en la contraseña"
           }
           if(mensaje !="")
           {
