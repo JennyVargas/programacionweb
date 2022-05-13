@@ -81,7 +81,7 @@
             <br>
             
             <form id="formulario"action="recibe.py" method="get" oninput='up2.setCustomValidity(up2.value != up.value ? "Las contraseñas no coinciden." : "")'>
-                Nombre: <input name="nombre" type="text" placeholder="ingrese el nombre" required>
+                Nombre: <input id="nombre" name="nombre" type="text" placeholder="ingrese el nombre" required>
                 <br>
                 Rut: <input type="text" id="rut" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
                 <!--<button type="submit">Validar RUT</button>-->
@@ -90,7 +90,7 @@
                 Edad: <input type="number" name="edad" id="" required>
                 <br>
 
-                Correo: <input type="email" name="email" id="" required>
+                Correo: <input type="email" name="email" id="email" required>
                 <br>
 
                 <!--Password: <input type="password" name="password" id="" placeholder="ingrese su contraseña"required>-->
@@ -199,10 +199,14 @@
           if($("$email").val().trim().lengh>=3){
            mensaje= "el Email debe ser mayor a 3"
           }
-          if($("$contraseña").val().trim().lenght>=6){
+          if($("$password").val().trim().lenght>=6){
             mensaje="Debe tener un minimo de 6 letras o numeros"
-            if($("$contraseña").val().trim().int>=1)
-            mensaje="Debe tener un numero en la contraseña"
+            //validar numero
+            if ( password.match(/\d/) ) {
+                $('#number').removeClass('invalid').addClass('valid');
+            } else {
+                $('#number').removeClass('valid').addClass('invalid');
+            }
           }
           if(mensaje !="")
           {
